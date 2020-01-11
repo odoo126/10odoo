@@ -141,9 +141,10 @@ odoo.define('print_views2pdf.views2pdf', function (require) {
                     var title = $('ol.breadcrumb').find('li.active').html();
                     doc.setFont("helvetica");
                     doc.setFontType("bold");
+                    doc.setFontSize(14);
                     doc.setTextColor(0,0,255);
                     doc.text(title, 20, 30);
-                    doc.addImage(imgData, 'JPEG', 20, 60, 500,80);
+                    doc.addImage(imgData, 'JPEG', 70, 80, 500,200);
                     doc.save('list.pdf');
                     form.width(cache_width);
         }
